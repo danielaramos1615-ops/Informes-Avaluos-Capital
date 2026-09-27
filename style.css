@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+legend {
+    font-weight: bold;
+    color: #333;
+    padding: 0 5px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #b71c1c;
+}
+#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+}
+#contenidoInforme {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
