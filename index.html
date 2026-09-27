@@ -9,10 +9,10 @@
 <body>
     <div class="container">
         <h1>Generador de Informe de Avalúo</h1>
-        <p>Complete los campos para generar el informe.</p>
+        <p>Complete los campos para generar el informe en Word.</p>
 
         <form id="avaluoForm">
-            <!-- SECCIÓN 0: LO PRIMERO QUE PREGUNTA -->
+            <!-- SECCIÓN 0: DATOS INICIALES -->
             <fieldset style="border: 2px solid #d32f2f; background: #fff3f3;">
                 <legend>⚠️ Datos Iniciales</legend>
                 <label>Código del Informe:</label>
@@ -28,7 +28,7 @@
             <!-- SECCIÓN 1: Datos Generales -->
             <fieldset>
                 <legend>1. Información General</legend>
-                <label>Solicitante:</label>
+                <label>Solicitante (Nombre y C.C.):</label>
                 <input type="text" id="solicitante" value="Danny Tavera Toro C.C. 1128441805">
                 
                 <label>Fecha de Avalúo:</label>
@@ -70,13 +70,26 @@
                 <input type="text" id="areaConstruida" value="250.00">
             </fieldset>
 
-            <button type="button" onclick="generarInforme()">Generar Informe</button>
+            <!-- SECCIÓN 4: Detalles Adicionales -->
+            <fieldset>
+                <legend>4. Detalles Adicionales</legend>
+                <label>Propietario (Nombre y C.C.):</label>
+                <input type="text" id="propietario" value="Hernando Bautista Mancera. C.C. 2439790">
+                
+                <label>Estrato:</label>
+                <input type="text" id="estrato" value="3: Medio">
+                
+                <label>Vía de Acceso:</label>
+                <input type="text" id="viaAcceso" value="Carrera 34">
+            </fieldset>
+
+            <button type="button" onclick="generarInforme()">Generar Informe y Descargar Word</button>
         </form>
 
         <div id="resultado" style="display:none;">
             <h2>Informe Generado</h2>
-            <div id="contenidoInforme"></div>
-            <button onclick="descargarPDF()">Descargar PDF</button>
+            <p>El archivo de Word se ha descargado automáticamente. Si no es así, haz clic en el botón de abajo.</p>
+            <button onclick="descargarWord()">Descargar Word de nuevo</button>
         </div>
     </div>
 
