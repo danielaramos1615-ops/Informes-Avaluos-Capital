@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Avalúo Comercial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Informe de Avalúo</h1>
+        <p>Complete los campos para generar el informe.</p>
+
+        <form id="avaluoForm">
+            <!-- SECCIÓN 0: LO PRIMERO QUE PREGUNTA -->
+            <fieldset style="border: 2px solid #d32f2f; background: #fff3f3;">
+                <legend>⚠️ Datos Iniciales</legend>
+                <label>Código del Informe:</label>
+                <input type="text" id="codigoInforme" value="AG010811" required>
+                
+                <label>Tipo de Plantilla:</label>
+                <select id="tipoPlantilla" required>
+                    <option value="No PH">No PH</option>
+                    <option value="PH">PH</option>
+                </select>
+            </fieldset>
+
+            <!-- SECCIÓN 1: Datos Generales -->
+            <fieldset>
+                <legend>1. Información General</legend>
+                <label>Solicitante:</label>
+                <input type="text" id="solicitante" value="Danny Tavera Toro C.C. 1128441805">
+                
+                <label>Fecha de Avalúo:</label>
+                <input type="date" id="fechaAvaluo" value="2026-08-05">
+                
+                <label>Avaluador:</label>
+                <input type="text" id="avaluador" value="Andrés Bustos">
+                
+                <label>Número de Registro RAA:</label>
+                <input type="text" id="registroRAA" value="581">
+            </fieldset>
+
+            <!-- SECCIÓN 2: Inmueble -->
+            <fieldset>
+                <legend>2. Identificación del Inmueble</legend>
+                <label>Dirección:</label>
+                <input type="text" id="direccion" value="CL 18 25 60">
+                
+                <label>Barrio:</label>
+                <input type="text" id="barrio" value="Paloquemao">
+                
+                <label>Localidad:</label>
+                <input type="text" id="localidad" value="Los Mártires">
+                
+                <label>Municipio:</label>
+                <input type="text" id="municipio" value="Bogotá D.C.">
+            </fieldset>
+
+            <!-- SECCIÓN 3: Valores y Áreas -->
+            <fieldset>
+                <legend>3. Valores y Áreas</legend>
+                <label>Valor Comercial (Solo números):</label>
+                <input type="text" id="valorComercial" value="100.219.700">
+                
+                <label>Área Terreno (m2):</label>
+                <input type="text" id="areaTerreno" value="118.22">
+                
+                <label>Área Construida (m2):</label>
+                <input type="text" id="areaConstruida" value="250.00">
+            </fieldset>
+
+            <button type="button" onclick="generarInforme()">Generar Informe</button>
+        </form>
+
+        <div id="resultado" style="display:none;">
+            <h2>Informe Generado</h2>
+            <div id="contenidoInforme"></div>
+            <button onclick="descargarPDF()">Descargar PDF</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
